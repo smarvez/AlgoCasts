@@ -14,6 +14,13 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n) {
+  let arr = [];
+  for (let i = 1; i < n; i++){
+    arr.push(Array(n-(i-1)).join(" ") + Array(2*i).join("#") + Array(n-(i-1)).join(" "))
+  }
+  arr.push(Array(2*n).join("#"));
+  arr.forEach(el => console.log(el));
+}
 
 module.exports = pyramid;
